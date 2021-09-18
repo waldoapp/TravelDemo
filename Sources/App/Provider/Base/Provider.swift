@@ -1,6 +1,4 @@
-import UIKit
-
-public class Provider: NSObject {
+public class Provider {
 
     // MARK: Public Nested Types
 
@@ -11,31 +9,13 @@ public class Provider: NSObject {
         case unknown
     }
 
-    // MARK: Public Instance Methods
+    // MARK: Public Initializers
 
-    public func didBecomeActive() {
+    public init(delegate: ProviderDelegate) {
+        self.delegate = delegate
     }
 
-    public func didEnterBackground() {
-    }
+    // MARK: Public Instance Properties
 
-    public func didFinishLaunching(_ options: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        true
-    }
-
-    public func didReceiveMemoryWarning() {
-    }
-
-    public func willEnterForeground() {
-    }
-
-    public func willFinishLaunching(_ options: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        true
-    }
-
-    public func willResignActive() {
-    }
-
-    public func willTerminate() {
-    }
+    public let delegate: ProviderDelegate
 }

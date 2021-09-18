@@ -4,13 +4,16 @@ public class BaseViewController: UIViewController {
 
     // MARK: Public Instance Properties
 
-    public weak var coordinator: MainCoordinator?
+    public weak var mainCoordinator: MainCoordinator?
 
     public private(set) var isViewVisible = false
 
     // MARK: Public Instance Methods
 
     public func bindViewModel() {
+    }
+
+    public func configureSubviews() {
     }
 
     // MARK: Overridden UIViewController Methods
@@ -26,6 +29,7 @@ public class BaseViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
+        configureSubviews()
         bindViewModel()
     }
 

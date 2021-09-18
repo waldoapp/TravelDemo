@@ -7,11 +7,15 @@ public class BaseTableViewCell: UITableViewCell {
     public func bindViewModel() {
     }
 
+    public func configureSubviews() {
+    }
+
     // MARK: Overridden NSObject Methods
 
     override public func awakeFromNib() {
         super.awakeFromNib()
 
+        configureSubviews()
         bindViewModel()
     }
 }

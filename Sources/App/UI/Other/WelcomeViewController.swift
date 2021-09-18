@@ -15,19 +15,29 @@ public class WelcomeViewController: BaseViewController {
 
     // MARK: Private Instance Methods
 
-    @IBAction private func signInButtonTapped(_ sender: UIButton) {
-        coordinator?.showSignIn()
+    @IBAction private func signInButtonTapped(_ sender: Any) {
+        guard let mc = mainCoordinator
+        else { return }
+
+        mc.providers.analytics.trackUIButtonTapped("signIn",
+                                                   screen: "welcome")
+
+        mc.showSignIn()
     }
 
-    @IBAction private func signUpButtonTapped(_ sender: UIButton) {
-        coordinator?.showSignUp()
+    @IBAction private func signUpButtonTapped(_ sender: Any) {
+        guard let mc = mainCoordinator
+        else { return }
+
+        mc.providers.analytics.trackUIButtonTapped("signUp",
+                                                   screen: "welcome")
+
+        mc.showSignUp()
     }
 
     // MARK: Overridden BaseViewController Methods
 
     override public func bindViewModel() {
-        super.bindViewModel()
-
         guard isViewLoaded,
               let vm = viewModel
         else { return }
@@ -43,12 +53,17 @@ public class WelcomeViewController: BaseViewController {
         termsLabel.text = vm.termsText
     }
 
-    // MARK: Overridden UIViewController Methods
+    override public func configureSubviews() {
+        messageLabel.text = nil
 
-    override public func viewDidLoad() {
-        super.viewDidLoad()
+        signInButton.accessibilityIdentifier = "sign_in_button"
+        signInButton.setTitle(nil,
+                              for: .normal)
 
-        signUpButton.layer.cornerRadius = signUpButton.frame.height / 2
-        signUpButton.layer.masksToBounds = true
+        signUpButton.accessibilityIdentifier = "sign_up_button"
+        signUpButton.setTitle(nil,
+                              for: .normal)
+
+        termsLabel.text = nil
     }
 }
