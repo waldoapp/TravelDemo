@@ -1,88 +1,69 @@
-import Foundation
+import UIKit
 
 public class Theme {
 
-    // MARK: Public Nested Types
-
-    public enum Name: String {
-        case daytime = "DaytimeTheme"
-        case evening = "EveningTheme"
-        case sunrise = "SunriseTheme"
-        case sunset  = "SunsetTheme"
-    }
-
     // MARK: Public Type Properties
 
-    public static let daytime = Theme(.daytime)
-    public static let evening = Theme(.evening)
-    public static let sunrise = Theme(.sunrise)
-    public static let sunset = Theme(.sunset)
+    public static let `default` = Theme(colors: DefaultColors(),
+                                        fonts: DefaultFonts())
 
     // MARK: Public Instance Properties
 
-    public let colors: ColorFactory
-    public let fonts: FontFactory
-    public let name: Name
-
-    // MARK: Private Nested Types
-
-    private struct RawNames: Decodable {
-        let color: String?
-        let font: String?
-    }
-
-    // MARK: Private Type Methods
-
-    private static func extractColorElementMap(_ rawMap: [String: RawNames]) -> [DisplayElement: String] {
-        var tmpMap: [DisplayElement: String] = [:]
-
-        for (key, value) in rawMap {
-            guard let element = DisplayElement(rawValue: key),
-                  let colorName = value.color
-            else { continue }
-
-            tmpMap[element] = colorName
-        }
-
-        return tmpMap
-    }
-
-    private static func extractFontElementMap(_ rawMap: [String: RawNames]) -> [DisplayElement: String] {
-        var tmpMap: [DisplayElement: String] = [:]
-
-        for (key, value) in rawMap {
-            guard let element = DisplayElement(rawValue: key),
-                  let fontName = value.font
-            else { continue }
-
-            tmpMap[element] = fontName
-        }
-
-        return tmpMap
-    }
-
-    private static func loadRawMap(_ name: Name) -> [String: RawNames] {
-        guard let url = Bundle.main.url(forResource: name.rawValue,
-                                        withExtension: "plist"),
-              let data = try? Data(contentsOf: url)
-        else { return [:] }
-
-        let decoder = PropertyListDecoder()
-
-        guard let rawMap = try? decoder.decode([String: RawNames].self,
-                                               from: data)
-        else { return [:] }
-
-        return rawMap
-    }
+    public let colors: ThemeColors
+    public let fonts: ThemeFonts
 
     // MARK: Private Initializers
 
-    private init(_ name: Name) {
-        let rawMap = Theme.loadRawMap(name)
-
-        self.colors = ColorFactory(Theme.extractColorElementMap(rawMap))
-        self.fonts = FontFactory(Theme.extractFontElementMap(rawMap))
-        self.name = name
+    private init(colors: ThemeColors,
+                 fonts: ThemeFonts) {
+        self.colors = colors
+        self.fonts = fonts
     }
+}
+
+// MARK: -
+
+public protocol ThemeColors {
+    var active: UIColor { get }
+    var activeLightMode: UIColor { get }
+    var background1: UIColor { get }
+    var background2: UIColor { get }
+    var backgroundBlur: UIColor { get }
+    var colorful1: UIColor { get }
+    var colorful2: UIColor { get }
+    var colorful3: UIColor { get }
+    var colorful4: UIColor { get }
+    var colorful5: UIColor { get }
+    var colorful6: UIColor { get }
+    var colorful7: UIColor { get }
+    var deactive: UIColor { get }
+    var deactiveDarker: UIColor { get }
+    var primary: UIColor { get }
+    var secondary: UIColor { get }
+    var white: UIColor { get }
+}
+
+// MARK: -
+
+public protocol ThemeFonts {
+    var bodyLarge: UIFont { get }
+    var bodySmall1: UIFont { get }
+    var bodySmall2: UIFont { get }
+    var bodySmall3: UIFont { get }
+    var buttonLarge: UIFont { get }
+    var buttonSmall: UIFont { get }
+    var captionLarge: UIFont { get }
+    var captionSmall: UIFont { get }
+    var headline0: UIFont { get }
+    var headline1: UIFont { get }
+    var headline2: UIFont { get }
+    var headline3: UIFont { get }
+    var headline4: UIFont { get }
+    var headline5: UIFont { get }
+    var headline6: UIFont { get }
+    var label: UIFont { get }
+    var tab: UIFont { get }
+    var titleLarge: UIFont { get }
+    var titleMedium: UIFont { get }
+    var titleSmall: UIFont { get }
 }

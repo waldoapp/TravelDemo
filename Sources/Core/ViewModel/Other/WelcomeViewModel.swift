@@ -9,7 +9,7 @@ public class WelcomeViewModel: ViewModel {
         self.termsText = "WELCOME.SCREEN.FOOTER.TERMS".localized
     }
 
-    // MARK: Public Instance properties
+    // MARK: Public Instance Properties
 
     public let messageText: String
     public let signInTitle: String

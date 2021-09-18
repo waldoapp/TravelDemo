@@ -4,7 +4,4 @@ public class ViewModel {
 
     public init() {
     }
-
-    // MARK: Public Instance Properties
-
 }

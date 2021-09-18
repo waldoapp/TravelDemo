@@ -1,104 +1,191 @@
-/* Get Started */
-"ONBOARDING.BUTTON.TITLE.GET_STARTED" = "Get Started";
+/* Me */
+"COMMON.AUTHOR.NAME.ME" = "Moi";
+
+/* You are already signed in! */
+"ERROR.MESSAGE.ALREADY_SIGNED_IN" = "Vous êtes déjà connecté!";
+
+/* Email address is already registered! */
+"ERROR.MESSAGE.DUPLICATE_CREDENTIALS" = "Cet email existe déjà!";
+
+/* That spot name is already taken! */
+"ERROR.MESSAGE.DUPLICATE_SPOT" = "Ce nom de spot est déjà pris!";
+
+/* Email address must use valid syntax */
+"ERROR.MESSAGE.INVALID_EMAIL" = "Adresse email invalide";
+
+/* Spot description must not be blank */
+"ERROR.MESSAGE.MISSING_DESCRIPTION" = "Veuillez renseigner une description";
+
+/* Email address must not be blank */
+"ERROR.MESSAGE.MISSING_EMAIL" = "Veuillez renseigner un email";
+
+/* Spot location must be determined */
+"ERROR.MESSAGE.MISSING_LOCATION" = "Veuillez ajouter une localisation";
+
+/* Spot name must not be blank */
+"ERROR.MESSAGE.MISSING_NAME" = "Veuillez renseigner un nom pour ce spot";
+
+/* Password must not be blank */
+"ERROR.MESSAGE.MISSING_PASSWORD" = "Veuillez renseigner un mot de passe";
+
+/* Photo of spot must be supplied */
+"ERROR.MESSAGE.MISSING_PHOTO" = "Veuillez rajouter une photo";
+
+/* You are not signed in! */
+"ERROR.MESSAGE.NOT_SIGNED_IN" = "Vous n’êtes pas connécté!";
+
+/* Unable to find a spot with that name! */
+"ERROR.MESSAGE.SPOT_NOT_FOUND" = "Aucun spot trouvé!";
+
+/* Email address or password does not match! */
+"ERROR.MESSAGE.UNKNOWN_CREDENTIALS" = "Email ou mot de passe incorrect!";
 
 /* Next */
-"ONBOARDING.BUTTON.TITLE.NEXT" = "Next";
+"ONBOARDING.BUTTON.TITLE.1" = "Suivant";
 
-/* Explore\nNew Spots */
-"ONBOARDING.SCREEN.MESSAGE.EXPLORE" = "Explore\nNew Spots";
+/* Get Started */
+"ONBOARDING.BUTTON.TITLE.2" = "Commencer";
 
-/* Share Spots\nYou’ve Been\nTo */
-"ONBOARDING.SCREEN.MESSAGE.SHARE" = "Share Spots\nYou’ve Been\nTo";
+/* Explore New Spots */
+"ONBOARDING.SCREEN.MESSAGE.1" = "Explore des nouveaux Spots";
+
+/* Share Spots You’ve Been To */
+"ONBOARDING.SCREEN.MESSAGE.2" = "Partagez vos meilleurs Spots";
+
+/* Cancel */
+"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_CANCEL" = "Annuler";
+
+/* Sign Out */
+"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_CONFIRM" = "Se déconnecter";
+
+/* OK */
+"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_ERROR" = "OK";
+
+/* Are you sure you want to sign out? */
+"PROFILE.ALERT.MESSAGE.SIGN_OUT_CONFIRM" = "Êtes-vous certain de vouloir vous déconnecter?";
+
+/* Confirm */
+"PROFILE.ALERT.TITLE.SIGN_OUT_CONFIRM" = "Confirmer";
+
+/* Error */
+"PROFILE.ALERT.TITLE.SIGN_OUT_ERROR" = "Erreur";
+
+/* Sign Out */
+"PROFILE.BUTTON.TITLE.SIGN_OUT" = "Se déconnecter";
+
+/* OK */
+"SIGN_IN.ALERT.ACTION.TITLE.ACTION_ERROR" = "OK";
+
+/* OK */
+"SIGN_IN.ALERT.ACTION.TITLE.VALIDATION_ERROR" = "OK";
+
+/* Error */
+"SIGN_IN.ALERT.TITLE.ACTION_ERROR"= "Erreur";
+
+/* Error */
+"SIGN_IN.ALERT.TITLE.VALIDATION_ERROR"= "Erreur";
 
 /* Sign In */
-"SIGN_IN.BUTTON.TITLE.SIGN_IN" = "Sign In";
+"SIGN_IN.BUTTON.TITLE.SIGN_IN" = "Se connecter";
 
 /* Sign Up */
-"SIGN_IN.BUTTON.TITLE.SIGN_UP" = "Sign Up";
+"SIGN_IN.BUTTON.TITLE.SIGN_UP" = "S’inscrire";
 
 /* Sign In */
-"SIGN_IN.SCREEN.TITLE.SIGN_IN" = "Sign In";
+"SIGN_IN.SCREEN.TITLE.SIGN_IN" = "Se connecter";
 
 /* Sign Up */
-"SIGN_IN.SCREEN.TITLE.SIGN_UP" = "Sign Up";
+"SIGN_IN.SCREEN.TITLE.SIGN_UP" = "S’inscrire";
 
 /* email address */
-"SIGN_IN.SECTION.PLACEHOLDER.EMAIL" = "email address";
+"SIGN_IN.SECTION.PLACEHOLDER.EMAIL" = "adresse e-mail";
 
 /* password */
-"SIGN_IN.SECTION.PLACEHOLDER.PASSWORD" = "password";
+"SIGN_IN.SECTION.PLACEHOLDER.PASSWORD" = "mot de passe";
 
-/* EMAIL */
-"SIGN_IN.SECTION.TITLE.EMAIL" = "EMAIL";
+/* Email */
+"SIGN_IN.SECTION.TITLE.EMAIL" = "E-mail";
 
-/* PASSWORD */
-"SIGN_IN.SECTION.TITLE.PASSWORD" = "PASSWORD";
+/* Password */
+"SIGN_IN.SECTION.TITLE.PASSWORD" = "Mot de passe";
+
+/* OK */
+"SPOT.ALERT.ACTION.TITLE.DELETE_ERROR" = "OK";
+
+/* Error */
+"SPOT.ALERT.TITLE.DELETE_ERROR" = "Erreur";
 
 /* Delete Spot */
-"SPOT.BUTTON.TITLE.DELETE_SPOT" = "Delete Spot";
+"SPOT.BUTTON.TITLE.DELETE_SPOT" = "Supprimer le Spot";
 
 /* Share */
-"SPOT.BUTTON.TITLE.SHARE" = "Share";
+"SPOT.BUTTON.TITLE.SHARE" = "Partager";
 
 /* Author */
-"SPOT.SECTION.TITLE.AUTHOR" = "Author";
+"SPOT.SECTION.TITLE.AUTHOR" = "Auteur";
 
 /* Description */
 "SPOT.SECTION.TITLE.DESCRIPTION" = "Description";
 
 /* Location */
-"SPOT.SECTION.TITLE.LOCATION" = "Location";
+"SPOT.SECTION.TITLE.LOCATION" = "Emplacement";
+
+/* OK */
+"SPOT_EDIT.ALERT.ACTION.TITLE.ADD_ERROR" = "OK";
+
+/* Error */
+"SPOT_EDIT.ALERT.TITLE.ADD_ERROR" = "Erreur";
 
 /* Add New Spot */
-"SPOT_EDIT.BUTTON.TITLE.ADD_NEW_SPOT" = "Add New Spot";
+"SPOT_EDIT.BUTTON.TITLE.ADD_NEW_SPOT" = "Ajouter un Spot";
 
 /* Add New Spot */
-"SPOT_EDIT.SCREEN.TITLE.ADD_NEW_SPOT" = "Add New Spot";
+"SPOT_EDIT.SCREEN.TITLE.ADD_NEW_SPOT" = "Ajouter un Spot";
 
 /* Describe the spot… */
-"SPOT_EDIT.SECTION.PLACEHOLDER.DESCRIPTION" = "Describe the spot…";
+"SPOT_EDIT.SECTION.PLACEHOLDER.DESCRIPTION" = "Décrivez l’endroit…";
 
 /* Set current location */
-"SPOT_EDIT.SECTION.PLACEHOLDER.LOCATION" = "Set current location";
+"SPOT_EDIT.SECTION.PLACEHOLDER.LOCATION" = "Définir l’emplacement actuel";
 
 /* e.g., Golden Gate Bridge */
-"SPOT_EDIT.SECTION.PLACEHOLDER.SPOT_NAME" = "e.g., Golden Gate Bridge";
+"SPOT_EDIT.SECTION.PLACEHOLDER.SPOT_NAME" = "Golden Gate Bridge";
 
-/* DESCRIPTION */
-"SPOT_EDIT.SECTION.TITLE.DESCRIPTION" = "DESCRIPTION";
+/* Description */
+"SPOT_EDIT.SECTION.TITLE.DESCRIPTION" = "Description";
 
-/* LOCATION */
-"SPOT_EDIT.SECTION.TITLE.LOCATION" = "LOCATION";
+/* Location */
+"SPOT_EDIT.SECTION.TITLE.LOCATION" = "Emplacement";
 
-/* SPOT NAME */
-"SPOT_EDIT.SECTION.TITLE.SPOT_NAME" = "SPOT NAME";
+/* Spot Name */
+"SPOT_EDIT.SECTION.TITLE.SPOT_NAME" = "Nom du spot";
 
-/* Cancel */
-"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.CANCEL" = "Cancel";
+/* OK */
+"SPOT_EDIT.ALERT.ACTION.TITLE.VALIDATION_ERROR" = "OK";
 
-/* Profile */
-"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.PROFILE" = "Profile";
-
-/* Sign Out */
-"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.SIGN_OUT" = "Sign Out";
+/* Error */
+"SPOT_EDIT.ALERT.TITLE.VALIDATION_ERROR" = "Erreur";
 
 /* Add New Spot */
-"SPOT_LIST.BUTTON.TITLE.ADD_NEW_SPOT" = "Add New Spot";
+"SPOT_LIST.BUTTON.TITLE.ADD_NEW_SPOT" = "Ajouter un Spot";
 
 /* No spots yet */
-"SPOT_LIST.SCREEN.MESSAGE.NO_SPOTS" = "No spots yet";
+"SPOT_LIST.SCREEN.MESSAGE.NO_SPOTS" = "Aucun Spot pour le moment";
 
 /* Explore */
-"SPOT_LIST.SCREEN.TITLE.EXPLORE" = "Explore";
+"SPOT_LIST.SCREEN.TITLE.EXPLORE" = "Explorer";
+
+/* Explore */
+"SPOT_LIST.SCREEN.TITLE.MY_SPOTS" = "Mes spots";
 
 /* Sign In */
-"WELCOME.BUTTON.TITLE.SIGN_IN" = "Sign In";
+"WELCOME.BUTTON.TITLE.SIGN_IN" = "Se connecter";
 
 /* Sign Up */
-"WELCOME.BUTTON.TITLE.SIGN_UP" = "Sign Up";
+"WELCOME.BUTTON.TITLE.SIGN_UP" = "S’inscrire";
 
 /* By continuing you agree to TravelSpot’s Terms of Service & Privacy Policy */
-"WELCOME.SCREEN.FOOTER.TERMS" = "By continuing you agree to TravelSpot’s Terms of Service & Privacy Policy";
+"WELCOME.SCREEN.FOOTER.TERMS" = "En continuant, vous acceptez les conditions d’utilisation et la politique de confidentialité de TravelSpot";
 
-/* Explore &\nShare Spots */
-"WELCOME.SCREEN.MESSAGE.EXPLORE" = "Explore &\nShare Spots";
+/* Explore & Share Spots */
+"WELCOME.SCREEN.MESSAGE.EXPLORE" = "Explore & Partage des Spots";

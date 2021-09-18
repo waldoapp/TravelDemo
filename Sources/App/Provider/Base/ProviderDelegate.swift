@@ -1,10 +1,7 @@
-import Foundation
+import UIKit
 
-internal protocol ProviderDelegate: NSObjectProtocol {
+public protocol ProviderDelegate: AnyObject {
+    func dismiss(_ vc: UIViewController)
 
-    // MARK: Instance Properties
-
-    var appInBackground: Bool { get }
-
-    var appInForeground: Bool { get }
+    func present(_ vc: UIViewController)
 }

@@ -4,10 +4,18 @@ public class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // MARK: Public Instance Properties
 
-    public var coordinator: MainCoordinator?
+    public var mainCoordinator: MainCoordinator?
     public var window: UIWindow?
 
     // MARK: Public Instance Methods
+
+    public func scene(_ scene: UIScene,
+                      continue userActivity: NSUserActivity) {
+        guard let deepLink = DeepLink(userActivity)
+        else { return }
+
+        mainCoordinator?.showDeepLink(deepLink)
+    }
 
     public func scene(_ scene: UIScene,
                       willConnectTo session: UISceneSession,
@@ -17,15 +25,18 @@ public class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               let nc = window.rootViewController as? UINavigationController
         else { return }
 
-        coordinator = MainCoordinator(nc)
+        let mc = MainCoordinator(nc)
 
-        coordinator?.start()
+        mc.start()
+
+        mainCoordinator = mc
     }
 
     public func sceneDidBecomeActive(_ scene: UIScene) {
     }
 
     public func sceneDidDisconnect(_ scene: UIScene) {
+        mainCoordinator = nil
     }
 
     public func sceneDidEnterBackground(_ scene: UIScene) {

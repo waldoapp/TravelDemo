@@ -30,8 +30,8 @@ public enum Formatter {
         integerFormatter.string(from: value) ?? "\(value)"
     }
 
-    public static func formatLocationCoordinate2D(_ value: CLLocationCoordinate2D) -> String {
-        guard CLLocationCoordinate2DIsValid(value)
+    public static func formatLocation(_ value: Location) -> String {
+        guard value.isValid
         else { return "Invalid" }
 
         let lng = _formatLocationDegrees(value.longitude,

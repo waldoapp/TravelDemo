@@ -1,13 +1,17 @@
----
-format_version: '8'
-default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
+format_version: "8"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: ios
+app:
+  envs:
+  - BITRISE_PROJECT_PATH: TravelSpot.xcworkspace
+    opts:
+      is_expand: false
+      unset: false
 trigger_map:
 - push_branch: master
   workflow: primary
-- pull_request_source_branch: '*'
+- push_branch: feature/*
   workflow: primary
-  pull_request_target_branch: master
 workflows:
   primary:
     steps:
@@ -15,19 +19,11 @@ workflows:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
     - git-clone:
         inputs:
-        - update_submodules: 'no'
-    - cache-pull: {}
+        - update_submodules: "no"
     - certificate-and-profile-installer: {}
     - recreate-user-schemes:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH
-    - ios-auto-provision:
-        inputs:
-        - scheme: TravelSpot
-        - team_id: ZW47GKM445
-        - generate_profiles: 'yes'
-        - configuration: Release
-    - cache-push: {}
     - xcode-build-for-simulator:
         inputs:
         - xcodebuild_options: CODE_SIGNING_ALLOWED=YES
@@ -37,9 +33,4 @@ workflows:
         inputs:
         - build_path: $BITRISE_APP_DIR_PATH
         - upload_token: $WALDO_UPLOAD_TOKEN
-        - find_symbols: 'yes'
-app:
-  envs:
-  - opts:
-      is_expand: false
-    BITRISE_PROJECT_PATH: TravelSpot.xcodeproj
+        - find_symbols: "yes"
