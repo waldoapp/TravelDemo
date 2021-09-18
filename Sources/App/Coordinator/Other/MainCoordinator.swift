@@ -107,9 +107,6 @@ public class MainCoordinator: Coordinator {
         let avc = UIActivityViewController(activityItems: [image],
                                            applicationActivities: nil)
 
-        avc.setValue(true,
-                     forKeyPath: "_disableDarkMode")
-
         navigationController.present(avc,
                                      animated: true)
 
