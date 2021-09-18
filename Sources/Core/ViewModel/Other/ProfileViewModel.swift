@@ -1,0 +1,2 @@
+public class ProfileViewModel: ViewModel {
+}

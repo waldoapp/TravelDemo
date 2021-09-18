@@ -1,0 +1,107 @@
+/* Next */
+"ONBOARDING.BUTTON.TITLE.1" = "Next";
+
+/* Get Started */
+"ONBOARDING.BUTTON.TITLE.2" = "Get Started";
+
+/* Explore\nNew Spots */
+"ONBOARDING.SCREEN.MESSAGE.1" = "Explore\nNew Spots";
+
+/* Share Spots\nYou’ve Been\nTo */
+"ONBOARDING.SCREEN.MESSAGE.2" = "Share Spots\nYou’ve Been\nTo";
+
+/* Sign In */
+"SIGN_IN.BUTTON.TITLE.SIGN_IN" = "Sign In";
+
+/* Sign Up */
+"SIGN_IN.BUTTON.TITLE.SIGN_UP" = "Sign Up";
+
+/* Sign In */
+"SIGN_IN.SCREEN.TITLE.SIGN_IN" = "Sign In";
+
+/* Sign Up */
+"SIGN_IN.SCREEN.TITLE.SIGN_UP" = "Sign Up";
+
+/* email address */
+"SIGN_IN.SECTION.PLACEHOLDER.EMAIL" = "email address";
+
+/* password */
+"SIGN_IN.SECTION.PLACEHOLDER.PASSWORD" = "password";
+
+/* EMAIL */
+"SIGN_IN.SECTION.TITLE.EMAIL" = "EMAIL";
+
+/* PASSWORD */
+"SIGN_IN.SECTION.TITLE.PASSWORD" = "PASSWORD";
+
+/* Delete Spot */
+"SPOT.BUTTON.TITLE.DELETE_SPOT" = "Delete Spot";
+
+/* Share */
+"SPOT.BUTTON.TITLE.SHARE" = "Share";
+
+/* Author */
+"SPOT.SECTION.TITLE.AUTHOR" = "Author";
+
+/* Description */
+"SPOT.SECTION.TITLE.DESCRIPTION" = "Description";
+
+/* Location */
+"SPOT.SECTION.TITLE.LOCATION" = "Location";
+
+/* Add New Spot */
+"SPOT_EDIT.BUTTON.TITLE.ADD_NEW_SPOT" = "Add New Spot";
+
+/* Add New Spot */
+"SPOT_EDIT.SCREEN.TITLE.ADD_NEW_SPOT" = "Add New Spot";
+
+/* Describe the spot… */
+"SPOT_EDIT.SECTION.PLACEHOLDER.DESCRIPTION" = "Describe the spot…";
+
+/* Set current location */
+"SPOT_EDIT.SECTION.PLACEHOLDER.LOCATION" = "Set current location";
+
+/* e.g., Golden Gate Bridge */
+"SPOT_EDIT.SECTION.PLACEHOLDER.SPOT_NAME" = "e.g., Golden Gate Bridge";
+
+/* DESCRIPTION */
+"SPOT_EDIT.SECTION.TITLE.DESCRIPTION" = "DESCRIPTION";
+
+/* LOCATION */
+"SPOT_EDIT.SECTION.TITLE.LOCATION" = "LOCATION";
+
+/* SPOT NAME */
+"SPOT_EDIT.SECTION.TITLE.SPOT_NAME" = "SPOT NAME";
+
+/* Cancel */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.CANCEL" = "Cancel";
+
+/* Profile */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.PROFILE" = "Profile";
+
+/* Sign Out */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.SIGN_OUT" = "Sign Out";
+
+/* Add New Spot */
+"SPOT_LIST.BUTTON.TITLE.ADD_NEW_SPOT" = "Add New Spot";
+
+/* No spots yet */
+"SPOT_LIST.SCREEN.MESSAGE.NO_SPOTS" = "No spots yet";
+
+/* Explore */
+"SPOT_LIST.SCREEN.TITLE.EXPLORE" = "Explore";
+
+/* Explore */
+"SPOT_LIST.SCREEN.TITLE.MY_SPOTS" = "My spots";
+
+/* Sign In */
+"WELCOME.BUTTON.TITLE.SIGN_IN" = "Sign In";
+
+/* Sign Up */
+"WELCOME.BUTTON.TITLE.SIGN_UP" = "Sign Up";
+
+/* By continuing you agree to TravelSpot’s Terms of Service & Privacy Policy */
+"WELCOME.SCREEN.FOOTER.TERMS" = "By continuing you agree to TravelSpot’s Terms of Service & Privacy Policy";
+
+/* Explore &\nShare Spots */
+"WELCOME.SCREEN.MESSAGE.EXPLORE" = "Explore &\nShare Spots";
