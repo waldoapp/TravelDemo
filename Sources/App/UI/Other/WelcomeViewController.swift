@@ -35,6 +35,22 @@ public class WelcomeViewController: BaseViewController {
         mc.showSignUp()
     }
 
+    private func _showSignOutConfirm() {
+        guard let mc = mainCoordinator,
+              let vm = viewModel
+        else { return }
+
+        let confirmAction = UIAlertAction(title: vm.signOutConfirmActionTitle,
+                                          style: .default,
+                                          handler: nil)
+
+        confirmAction.accessibilityIdentifier = "alert_sign_out_confirm_action"
+
+        mc.showAlert(title: vm.signOutConfirmTitle,
+                     message: vm.signOutConfirmMessage,
+                     actions: [confirmAction])
+    }
+
     // MARK: Overridden BaseViewController Methods
 
     override public func bindViewModel() {
@@ -65,5 +81,18 @@ public class WelcomeViewController: BaseViewController {
                               for: .normal)
 
         termsLabel.text = nil
+    }
+
+    // MARK: Overridden UIViewController Methods
+
+    override public func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        guard let vm = viewModel
+        else { return }
+
+        if vm.signedOut {
+            _showSignOutConfirm()
+        }
     }
 }

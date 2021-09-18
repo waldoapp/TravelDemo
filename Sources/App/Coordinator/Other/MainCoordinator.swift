@@ -193,7 +193,7 @@ public class MainCoordinator: Coordinator {
         else { return false }
 
         vc.mainCoordinator = self
-        vc.viewModel = WelcomeViewModel()
+        vc.viewModel = WelcomeViewModel(signingOut)
 
         if signingOut,
            let topVC = navigationController.topViewController {
