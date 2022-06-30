@@ -796,50 +796,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li2-LZ-bbJ">
-                                <rect key="frame" x="40" y="349.5" width="354" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="BzV-ii-Evm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
-                                <state key="normal" title="Sign Out" backgroundImage="main_btn">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <state key="disabled" backgroundImage="main_btn_disable">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="main_btn_hi">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionButtonTapped:" destination="2lM-3X-xn3" eventType="primaryActionTriggered" id="BTw-gk-zTo"/>
-                                    <action selector="signOutButtonTapped:" destination="LqL-nb-s7L" eventType="primaryActionTriggered" id="Unx-zj-zOh"/>
-                                </connections>
-                            </button>
-                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BpA-jA-nYZ" customClass="SpinnerView" customModule="TravelSpot" customModuleProvider="target">
-                                <rect key="frame" x="182" y="428" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" placeholder="YES" id="4cS-Mt-bPm"/>
-                                    <constraint firstAttribute="height" constant="50" placeholder="YES" id="86S-In-B4E"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0hQ-1Z-WIt"/>
                         <color key="backgroundColor" red="0.094117647060000004" green="0.1019607843" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cB1-Xy-XXb" firstAttribute="top" secondItem="KUw-tZ-ApY" secondAttribute="top" id="3pO-C4-3dI"/>
-                            <constraint firstItem="0hQ-1Z-WIt" firstAttribute="trailing" secondItem="Li2-LZ-bbJ" secondAttribute="trailing" constant="20" id="589-qO-HeO"/>
                             <constraint firstItem="G7g-Xu-2AM" firstAttribute="centerX" secondItem="0hQ-1Z-WIt" secondAttribute="centerX" id="80H-Mc-bCJ"/>
                             <constraint firstItem="ptc-um-COn" firstAttribute="centerX" secondItem="0hQ-1Z-WIt" secondAttribute="centerX" id="IHg-Q5-Y3D"/>
                             <constraint firstAttribute="bottom" secondItem="cB1-Xy-XXb" secondAttribute="bottom" id="Je0-la-gWL"/>
                             <constraint firstItem="7KD-o6-Fnw" firstAttribute="leading" secondItem="0hQ-1Z-WIt" secondAttribute="leading" id="Jhu-Av-0Q7"/>
-                            <constraint firstItem="BpA-jA-nYZ" firstAttribute="centerY" secondItem="0hQ-1Z-WIt" secondAttribute="centerY" id="T9G-Zf-Vd3"/>
-                            <constraint firstItem="Li2-LZ-bbJ" firstAttribute="top" secondItem="G7g-Xu-2AM" secondAttribute="bottom" constant="64" id="URd-YL-lfm"/>
                             <constraint firstItem="7KD-o6-Fnw" firstAttribute="top" secondItem="KUw-tZ-ApY" secondAttribute="top" constant="44" id="VLu-Rh-ssl"/>
                             <constraint firstItem="0hQ-1Z-WIt" firstAttribute="trailing" secondItem="cB1-Xy-XXb" secondAttribute="trailing" id="WL5-qr-MKb"/>
-                            <constraint firstItem="Li2-LZ-bbJ" firstAttribute="leading" secondItem="0hQ-1Z-WIt" secondAttribute="leading" constant="40" id="YCH-je-1jT"/>
                             <constraint firstItem="0hQ-1Z-WIt" firstAttribute="trailing" secondItem="7KD-o6-Fnw" secondAttribute="trailing" id="isD-kQ-qsz"/>
-                            <constraint firstItem="BpA-jA-nYZ" firstAttribute="centerX" secondItem="0hQ-1Z-WIt" secondAttribute="centerX" id="jAP-aq-8IG"/>
                             <constraint firstItem="cB1-Xy-XXb" firstAttribute="leading" secondItem="0hQ-1Z-WIt" secondAttribute="leading" id="ngz-HB-YAs"/>
                             <constraint firstItem="G7g-Xu-2AM" firstAttribute="top" secondItem="ptc-um-COn" secondAttribute="bottom" constant="32" id="uao-hq-JD5"/>
                             <constraint firstItem="ptc-um-COn" firstAttribute="top" secondItem="7KD-o6-Fnw" secondAttribute="bottom" constant="16" id="yyB-jf-OBW"/>
@@ -851,8 +819,6 @@
                         <outlet property="avatarImageView" destination="ptc-um-COn" id="oS8-0e-aI8"/>
                         <outlet property="backButton" destination="C4w-dm-d08" id="sag-x1-Ukh"/>
                         <outlet property="emailAddressLabel" destination="G7g-Xu-2AM" id="TRo-dX-sI1"/>
-                        <outlet property="signOutButton" destination="Li2-LZ-bbJ" id="h0C-ZK-o4z"/>
-                        <outlet property="spinnerView" destination="BpA-jA-nYZ" id="ktw-Pk-ghY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhb-8y-fuT" sceneMemberID="firstResponder"/>

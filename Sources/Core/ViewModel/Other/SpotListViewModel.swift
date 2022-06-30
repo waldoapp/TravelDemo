@@ -4,16 +4,26 @@ public class SpotListViewModel: ViewModel {
 
     public init(_ mySpots: Bool,
                 _ client: TravelSpotClient) {
+        self.cancelActionTitle = "SPOT_LIST.ACTION_SHEET.ACTION.TITLE.CANCEL".localized
         self.client = client
         self.emptyAddTitle = "SPOT_LIST.BUTTON.TITLE.ADD_NEW_SPOT".localized
         self.emptyMessageText = "SPOT_LIST.SCREEN.MESSAGE.NO_SPOTS".localized
         self.mySpots = mySpots
+        self.profileActionTitle = "SPOT_LIST.ACTION_SHEET.ACTION.TITLE.PROFILE".localized
+        self.signOutActionTitle = "SPOT_LIST.ACTION_SHEET.ACTION.TITLE.SIGN_OUT".localized
+        self.signOutErrorActionTitle = "SPOT_LIST.ALERT.ACTION.TITLE.SIGN_OUT_ERROR".localized
+        self.signOutErrorTitle = "SPOT_LIST.ALERT.TITLE.SIGN_OUT_ERROR".localized
     }
 
     // MARK: Public Instance Properties
 
+    public let cancelActionTitle: String
     public let emptyAddTitle: String
     public let emptyMessageText: String
+    public let profileActionTitle: String
+    public let signOutActionTitle: String
+    public let signOutErrorActionTitle: String
+    public let signOutErrorTitle: String
 
     public var mySpots: Bool
 
@@ -35,6 +45,18 @@ public class SpotListViewModel: ViewModel {
 
             case let .success(spots):
                 completion(spots.map { SpotCellViewModel($0) })
+            }
+        }
+    }
+
+    public func signOut(completion: @escaping (Error?) -> Void) {
+        client.signOut {
+            switch $0 {
+            case let .failure(error):
+                completion(error)
+
+            case .success:
+                completion(nil)
             }
         }
     }

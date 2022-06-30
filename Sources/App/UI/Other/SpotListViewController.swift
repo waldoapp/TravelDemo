@@ -110,13 +110,36 @@ public class SpotListViewController: BaseViewController {
     }
 
     @IBAction private func profileButtonTapped(_ sender: Any) {
-        guard let mc = mainCoordinator
+        guard let mc = mainCoordinator,
+              let vm = viewModel
         else { return }
 
         mc.providers.analytics.trackUIButtonTapped("profile",
                                                    screen: "spotList")
 
-        mc.showProfile()
+        let cancelAction = UIAlertAction(title: vm.cancelActionTitle,
+                                         style: .cancel,
+                                         handler: nil)
+
+        cancelAction.accessibilityIdentifier = "sheet_cancel_action"
+
+        let profileAction = UIAlertAction(title: vm.profileActionTitle,
+                                          style: .default) { _ in
+            mc.showProfile()
+        }
+
+        profileAction.accessibilityIdentifier = "sheet_profile_action"
+
+        let signOutAction = UIAlertAction(title: vm.signOutActionTitle,
+                                          style: .destructive) { [weak self] _ in
+            self?._signOut()
+        }
+
+        signOutAction.accessibilityIdentifier = "sheet_sign_out_action"
+
+        mc.showActionSheet(actions: [profileAction,
+                                     signOutAction,
+                                     cancelAction])
     }
 
     private func _configureSpinnerView() {
@@ -175,6 +198,44 @@ public class SpotListViewController: BaseViewController {
             tableView.isHidden = false
 
             tableView.reloadData()
+        }
+    }
+
+    private func _showSignOutError(_ error: Error) {
+        guard let mc = mainCoordinator,
+              let vm = viewModel
+        else { return }
+
+        let errorAction = UIAlertAction(title: vm.signOutErrorActionTitle,
+                                        style: .default,
+                                        handler: nil)
+
+        errorAction.accessibilityIdentifier = "alert_sign_out_error_action"
+
+        mc.showAlert(title: vm.signOutErrorTitle,
+                     message: error.localizedDescription,
+                     actions: [errorAction])
+    }
+
+    private func _signOut() {
+        guard let mc = mainCoordinator,
+              let vm = viewModel
+        else { return }
+
+        profileButton.isEnabled = false
+
+        _refreshSpinnerView(true)
+
+        vm.signOut { [weak self] in
+            self?._refreshSpinnerView(false)
+
+            if let error = $0 {
+                self?._showSignOutError(error)
+
+                self?.profileButton.isEnabled = true
+            } else {
+                mc.showWelcome(signingOut: true)
+            }
         }
     }
 

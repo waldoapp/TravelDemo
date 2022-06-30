@@ -52,24 +52,6 @@
 /* Share Spots You’ve Been To */
 "ONBOARDING.SCREEN.MESSAGE.2" = "Partagez vos meilleurs Spots";
 
-/* Cancel */
-"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_CANCEL" = "Annuler";
-
-/* Sign Out */
-"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_CONFIRM" = "Se déconnecter";
-
-/* OK */
-"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_ERROR" = "OK";
-
-/* Are you sure you want to sign out? */
-"PROFILE.ALERT.MESSAGE.SIGN_OUT_CONFIRM" = "Êtes-vous certain de vouloir vous déconnecter?";
-
-/* Confirm */
-"PROFILE.ALERT.TITLE.SIGN_OUT_CONFIRM" = "Confirmer";
-
-/* Error */
-"PROFILE.ALERT.TITLE.SIGN_OUT_ERROR" = "Erreur";
-
 /* Sign Out */
 "PROFILE.BUTTON.TITLE.SIGN_OUT" = "Se déconnecter";
 
@@ -166,6 +148,27 @@
 /* Error */
 "SPOT_EDIT.ALERT.TITLE.VALIDATION_ERROR" = "Erreur";
 
+/* Cancel */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.CANCEL" = "Annuler";
+
+/* Profile */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.PROFILE" = "Profil";
+
+/* Sign Out */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.SIGN_OUT" = "Se déconnecter";
+
+/* Cancel */
+"SPOT_LIST.ALERT.ACTION.TITLE.SIGN_OUT_CANCEL" = "Annuler";
+
+/* Sign Out */
+"SPOT_LIST.ALERT.ACTION.TITLE.SIGN_OUT_CONFIRM" = "Se déconnecter";
+
+/* OK */
+"SPOT_LIST.ALERT.ACTION.TITLE.SIGN_OUT_ERROR" = "OK";
+
+/* Error */
+"SPOT_LIST.ALERT.TITLE.SIGN_OUT_ERROR" = "Erreur";
+
 /* Add New Spot */
 "SPOT_LIST.BUTTON.TITLE.ADD_NEW_SPOT" = "Ajouter un Spot";
 
@@ -177,6 +180,15 @@
 
 /* Explore */
 "SPOT_LIST.SCREEN.TITLE.MY_SPOTS" = "Mes spots";
+
+/* OK */
+"WELCOME.ALERT.ACTION.TITLE.SIGN_OUT_CONFIRM" = "OK";
+
+/* Please come again! */
+"WELCOME.ALERT.MESSAGE.SIGN_OUT_CONFIRM" = "Reviens s’il te plait!";
+
+/* You Were Signed Out */
+"WELCOME.ALERT.TITLE.SIGN_OUT_CONFIRM" = "Vous étiez déconnecté";
 
 /* Sign In */
 "WELCOME.BUTTON.TITLE.SIGN_IN" = "Se connecter";

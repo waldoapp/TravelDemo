@@ -52,24 +52,6 @@
 /* Share Spots You’ve Been To */
 "ONBOARDING.SCREEN.MESSAGE.2" = "Teile Orte an denen du warst";
 
-/* Cancel */
-"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_CANCEL" = "Abbrechen";
-
-/* Sign Out */
-"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_CONFIRM" = "Ausloggen";
-
-/* OK */
-"PROFILE.ALERT.ACTION.TITLE.SIGN_OUT_ERROR" = "OK";
-
-/* Are you sure you want to sign out? */
-"PROFILE.ALERT.MESSAGE.SIGN_OUT_CONFIRM" = "Möchten Sie sich wirklich abmelden?";
-
-/* Confirm */
-"PROFILE.ALERT.TITLE.SIGN_OUT_CONFIRM" = "Bestätigen";
-
-/* Error */
-"PROFILE.ALERT.TITLE.SIGN_OUT_ERROR" = "Fehler";
-
 /* Sign Out */
 "PROFILE.BUTTON.TITLE.SIGN_OUT" = "Ausloggen";
 
@@ -166,6 +148,27 @@
 /* Error */
 "SPOT_EDIT.ALERT.TITLE.VALIDATION_ERROR" = "Fehler";
 
+/* Cancel */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.CANCEL" = "Abbrechen";
+
+/* Profile */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.PROFILE" = "Profil";
+
+/* Sign Out */
+"SPOT_LIST.ACTION_SHEET.ACTION.TITLE.SIGN_OUT" = "Ausloggen";
+
+/* Cancel */
+"SPOT_LIST.ALERT.ACTION.TITLE.SIGN_OUT_CANCEL" = "Abbrechen";
+
+/* Sign Out */
+"SPOT_LIST.ALERT.ACTION.TITLE.SIGN_OUT_CONFIRM" = "Ausloggen";
+
+/* OK */
+"SPOT_LIST.ALERT.ACTION.TITLE.SIGN_OUT_ERROR" = "OK";
+
+/* Error */
+"SPOT_LIST.ALERT.TITLE.SIGN_OUT_ERROR" = "Fehler";
+
 /* Add New Spot */
 "SPOT_LIST.BUTTON.TITLE.ADD_NEW_SPOT" = "Neuen Ort hinzufügen";
 
@@ -177,6 +180,15 @@
 
 /* Explore */
 "SPOT_LIST.SCREEN.TITLE.MY_SPOTS" = "Meine Orte";
+
+/* OK */
+"WELCOME.ALERT.ACTION.TITLE.SIGN_OUT_CONFIRM" = "OK";
+
+/* Please come again! */
+"WELCOME.ALERT.MESSAGE.SIGN_OUT_CONFIRM" = "Bitte komm wieder!";
+
+/* You Were Signed Out */
+"WELCOME.ALERT.TITLE.SIGN_OUT_CONFIRM" = "Sie wurden abgemeldet";
 
 /* Sign In */
 "WELCOME.BUTTON.TITLE.SIGN_IN" = "Einloggen";
