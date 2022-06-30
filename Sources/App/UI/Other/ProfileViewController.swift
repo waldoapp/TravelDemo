@@ -20,18 +20,15 @@ public class ProfileViewController: BaseViewController {
         guard let mc = mainCoordinator
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("back",
-                                                   screen: "profile")
+        analytics?.trackUIButtonTapped("back",
+                                       screen: "profile")
 
         mc.showPrevious()
     }
 
     @IBAction private func signOutButtonTapped(_ sender: Any) {
-        guard let mc = mainCoordinator
-        else { return }
-
-        mc.providers.analytics.trackUIButtonTapped("signOut",
-                                                   screen: "profile")
+        analytics?.trackUIButtonTapped("signOut",
+                                       screen: "profile")
 
         _showSignOutConfirm { [weak self] in
             self?._signOut()
@@ -132,15 +129,27 @@ public class ProfileViewController: BaseViewController {
 
         _refreshSpinnerView(true)
 
+        let email = vm.emailText
+
+        analytics?.trackActionRequested("sign_out",
+                                        name: email)
+
         vm.signOut { [weak self] in
             self?._refreshSpinnerView(false)
 
             if let message = $0 {
+                self?.analytics?.trackActionFailed("sign_out",
+                                                   name: email,
+                                                   reason: message)
+
                 self?._showSignOutError(message)
 
                 self?.backButton.isEnabled = true
                 self?.signOutButton.isEnabled = true
             } else {
+                self?.analytics?.trackActionSucceeded("sign_out",
+                                                      name: email)
+
                 mc.showWelcome(signingOut: true)
             }
         }

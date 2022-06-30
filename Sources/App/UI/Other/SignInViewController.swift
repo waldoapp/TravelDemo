@@ -28,11 +28,12 @@ public class SignInViewController: BaseViewController {
               let vm = viewModel
         else { return }
 
+        let action = vm.isRegistering ? "sign_up" : "sign_in"
         let button = vm.isRegistering ? "signUp" : "signIn"
-        let screen = vm.isRegistering ? "signUp" : "signIn"
+        let screen = button
 
-        mc.providers.analytics.trackUIButtonTapped(button,
-                                                   screen: screen)
+        analytics?.trackUIButtonTapped(button,
+                                       screen: screen)
 
         if let error = vm.validate(email: emailTextField.text,
                                    password: passwordTextField.text) {
@@ -56,21 +57,33 @@ public class SignInViewController: BaseViewController {
 
         _refreshSpinnerView(true)
 
+        analytics?.trackActionRequested(action,
+                                        name: email)
+
         vm.performAction(email: email,
                          password: password) { [weak self] in
             self?._refreshSpinnerView(false)
 
             if let error = $0 {
+                self?.analytics?.trackActionFailed(action,
+                                                   name: email,
+                                                   reason: error.localizedDescription)
+
                 self?._showActionError(error)
 
                 self?.actionButton.isEnabled = true
                 self?.backButton.isEnabled = true
                 self?.emailTextField.isEnabled = true
                 self?.passwordTextField.isEnabled = true
-            } else if vm.isRegistering {
-                mc.showOnboarding()
             } else {
-                mc.showSpotList(mySpots: false)
+                self?.analytics?.trackActionSucceeded(action,
+                                                      name: email)
+
+                if vm.isRegistering {
+                    mc.showOnboarding()
+                } else {
+                    mc.showSpotList(mySpots: false)
+                }
             }
         }
     }
@@ -82,8 +95,8 @@ public class SignInViewController: BaseViewController {
 
         let screen = vm.isRegistering ? "signUp" : "signIn"
 
-        mc.providers.analytics.trackUIButtonTapped("back",
-                                                   screen: screen)
+        analytics?.trackUIButtonTapped("back",
+                                       screen: screen)
 
         mc.showPrevious()
     }
@@ -191,15 +204,14 @@ public class SignInViewController: BaseViewController {
 
     @objc
     private func _revealButtonTapped(_ sender: Any) {
-        guard let mc = mainCoordinator,
-              let vm = viewModel,
+        guard let vm = viewModel,
               let revealButton = sender as? UIButton
         else { return }
 
         let screen = vm.isRegistering ? "signUp" : "signIn"
 
-        mc.providers.analytics.trackUIButtonTapped("reveal",
-                                                   screen: screen)
+        analytics?.trackUIButtonTapped("reveal",
+                                       screen: screen)
 
         revealButton.isSelected.toggle()
 

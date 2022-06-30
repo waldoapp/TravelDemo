@@ -53,8 +53,8 @@ public class SpotListViewController: BaseViewController {
         guard let mc = mainCoordinator
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("add",
-                                                   screen: "spotList")
+        analytics?.trackUIButtonTapped("add",
+                                       screen: "spotList")
 
         mc.showSpotEdit()
     }
@@ -63,20 +63,19 @@ public class SpotListViewController: BaseViewController {
         guard let mc = mainCoordinator
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("emptyAdd",
-                                                   screen: "spotList")
+        analytics?.trackUIButtonTapped("emptyAdd",
+                                       screen: "spotList")
 
         mc.showSpotEdit()
     }
 
     @IBAction private func exploreButtonTapped(_ sender: Any) {
-        guard let mc = mainCoordinator,
-              let vm = viewModel,
+        guard let vm = viewModel,
               vm.mySpots
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("explore",
-                                                   screen: "spotList")
+        analytics?.trackUIButtonTapped("explore",
+                                       screen: "spotList")
 
         vm.mySpots = false
 
@@ -90,13 +89,12 @@ public class SpotListViewController: BaseViewController {
     }
 
     @IBAction private func mySpotsButtonTapped(_ sender: Any) {
-        guard let mc = mainCoordinator,
-              let vm = viewModel,
+        guard let vm = viewModel,
               !vm.mySpots
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("mySpots",
-                                                   screen: "spotList")
+        analytics?.trackUIButtonTapped("mySpots",
+                                       screen: "spotList")
 
         vm.mySpots = true
 
@@ -113,8 +111,8 @@ public class SpotListViewController: BaseViewController {
         guard let mc = mainCoordinator
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("profile",
-                                                   screen: "spotList")
+        analytics?.trackUIButtonTapped("profile",
+                                       screen: "spotList")
 
         mc.showProfile()
     }
