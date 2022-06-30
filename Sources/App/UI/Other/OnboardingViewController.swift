@@ -21,8 +21,8 @@ public class OnboardingViewController: BaseViewController {
               let vm = viewModel
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("action",
-                                                   screen: "onboarding")
+        analytics?.trackUIButtonTapped("action",
+                                       screen: "onboarding")
 
         if let step = vm.nextStep {
             mc.showOnboarding(for: step)

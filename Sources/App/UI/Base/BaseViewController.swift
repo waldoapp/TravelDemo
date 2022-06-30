@@ -8,6 +8,10 @@ public class BaseViewController: UIViewController {
 
     public private(set) var isViewVisible = false
 
+    public var analytics: AnalyticsProvider? {
+        mainCoordinator?.providers.analytics
+    }
+
     // MARK: Public Instance Methods
 
     public func bindViewModel() {

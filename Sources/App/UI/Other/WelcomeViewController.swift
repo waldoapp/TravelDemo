@@ -19,8 +19,8 @@ public class WelcomeViewController: BaseViewController {
         guard let mc = mainCoordinator
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("signIn",
-                                                   screen: "welcome")
+        analytics?.trackUIButtonTapped("signIn",
+                                       screen: "welcome")
 
         mc.showSignIn()
     }
@@ -29,8 +29,8 @@ public class WelcomeViewController: BaseViewController {
         guard let mc = mainCoordinator
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("signUp",
-                                                   screen: "welcome")
+        analytics?.trackUIButtonTapped("signUp",
+                                       screen: "welcome")
 
         mc.showSignUp()
     }

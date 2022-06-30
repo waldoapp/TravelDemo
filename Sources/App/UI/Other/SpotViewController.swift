@@ -28,8 +28,8 @@ public class SpotViewController: BaseViewController {
         guard let mc = mainCoordinator
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("back",
-                                                   screen: "spot")
+        analytics?.trackUIButtonTapped("back",
+                                       screen: "spot")
 
         mc.showPrevious()
     }
@@ -40,23 +40,35 @@ public class SpotViewController: BaseViewController {
               vm.isMine
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("spot",
-                                                   screen: "delete")
+        analytics?.trackUIButtonTapped("delete",
+                                       screen: "spot")
 
         backButton.isEnabled = false
         deleteButton.isEnabled = false
 
         _refreshSpinnerView(true)
 
+        let name = vm.spotNameText
+
+        analytics?.trackActionRequested("delete_spot",
+                                        name: name)
+
         vm.deleteSpot { [weak self] in
             self?._refreshSpinnerView(false)
 
             if let error = $0 {
+                self?.analytics?.trackActionFailed("delete_spot",
+                                                   name: name,
+                                                   reason: error.localizedDescription)
+
                 self?._showDeleteError(error)
 
                 self?.backButton.isEnabled = true
                 self?.deleteButton.isEnabled = true
             } else {
+                self?.analytics?.trackActionSucceeded("delete_spot",
+                                                      name: name)
+
                 mc.showPrevious()
             }
         }
@@ -68,8 +80,8 @@ public class SpotViewController: BaseViewController {
               !vm.isMine
         else { return }
 
-        mc.providers.analytics.trackUIButtonTapped("share",
-                                                   screen: "spot")
+        analytics?.trackUIButtonTapped("share",
+                                       screen: "spot")
 
         mc.showShareSheet(for: vm)
     }
